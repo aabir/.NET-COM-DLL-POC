@@ -1,11 +1,11 @@
-﻿using System.Runtime.InteropServices;
+using System.Runtime.InteropServices;
 
 
 namespace CalculatorCOM
 {
     [ComVisible(true)]
-    [Guid("00BD7975-AFE0-4C57-BBFA-7EEB6E815BF7")]
-    [InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
+    [Guid("e1b4bafa-8300-4336-87f5-d191fc71ff47")]
+    [InterfaceType(ComInterfaceType.InterfaceIsDual)]
     public interface ICalculatorCOM
     {
         [DispId(3)]
