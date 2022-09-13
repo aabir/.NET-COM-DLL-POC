@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -7,6 +7,15 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="{6dcfe41d-7a38-47dd-841d-bb26aae8e87a}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>6dcfe41d-7a38-47dd-841d-bb26aae8e87a</Guid>
+    </COMReference>
+  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="CalculatorCOM">
