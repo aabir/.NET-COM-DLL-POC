@@ -1,3 +1,5 @@
+using System.IO.Abstractions;
+using System.IO.Abstractions.TestingHelpers;
 using CalculatorCOM;
 using Moq;
 
@@ -5,11 +7,15 @@ namespace CalculatorCOMTest
 {
     public class CalculatorCOMTest
     {
+        //readonly Mock<IFileIOWrapper> _mockFileSystemMock;
+        readonly Mock<IFileSystem> _fileSystemMock;
+
         private readonly CalculatorCOM.CalculatorCOM _calculator;
         private readonly Mock<ICalculatorCOM> _mock;
 
         public CalculatorCOMTest()
         {
+            //_mockFileSystemMock = new Mock<IFileIOWrapper>();
             _calculator = new CalculatorCOM.CalculatorCOM();
             _mock = new Mock<ICalculatorCOM>();
         }
@@ -45,17 +51,16 @@ namespace CalculatorCOMTest
         public void ToJSON_With_Correct_Object()
         {
             var businessObj = SampleBusinessObj();
-            var path = @"C:\\01WORKSPACE\\04IRASSG\\BusinessObj.json";
-
-            //_mock.Setup(x => x.ToJSON(businessObj, path)).Verifiable();
-        }
-
-        [Fact]
-        public void ToJSON_With_Invalid_Object()
-        {
-            var businessObj = InvalidBusinessObj();
             var path = "C:\\01WORKSPACE\\04IRASSG\\BusinessObj.json";
-            _mock.Setup(x => x.ToJSON(businessObj, path)).Verifiable();
+
+            var mockFileIO = new Mock<IFileSystem>();
+            var mockFileSystem = new MockFileSystem();
+            mockFileSystem.AddFile(path, businessObj.ToString());
+
+            var sut = new CalculatorCOM.CalculatorCOM(mockFileSystem);
+            sut.ToJSON(businessObj, path);
+
+            MockFileData mockOutputFile = mockFileSystem.GetFile(path);
         }
 
         private BusinessObj SampleBusinessObj()
