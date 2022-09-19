@@ -1,5 +1,5 @@
 using System;
-using System.IO;
+using System.IO.Abstractions;
 using System.Runtime.InteropServices;
 using System.Text.Json;
 
@@ -11,6 +11,17 @@ namespace CalculatorCOM
     [ProgId("CalculatorCOM.CalculatorCOM")]
     public class CalculatorCOM : ICalculatorCOM
     {
+        private readonly IFileSystem _fileSystem;
+
+        public CalculatorCOM(IFileSystem fileSystem)
+        {
+            _fileSystem = fileSystem;
+        }
+        public CalculatorCOM()
+        {
+
+        }
+
         public int Sum(int val1, int val2)
         {
             try
@@ -32,7 +43,7 @@ namespace CalculatorCOM
         public void ToJSON(BusinessObj businessObj, string outputPath)
         {
             var jsonString = JsonSerializer.Serialize(businessObj);
-            File.WriteAllText(outputPath, jsonString);
+            _fileSystem.File.WriteAllText(outputPath, jsonString);
         }
     }
 }

@@ -7,9 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorCOM", "src\Calcul
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0CAB3CFE-45A5-424B-A644-0CFD7B580319}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorCOMTest", "CalculatorCOMTest\CalculatorCOMTest.csproj", "{464FCA6A-C74D-4B03-909F-44B1E6E138E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorCOMTest", "CalculatorCOMTest\CalculatorCOMTest.csproj", "{464FCA6A-C74D-4B03-909F-44B1E6E138E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorCOMConsumer", "src\CalculatorCOMConsumer\CalculatorCOMConsumer.csproj", "{79368F43-C5D6-4267-9EFC-17CF54394062}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorCOMConsumer", "src\CalculatorCOMConsumer\CalculatorCOMConsumer.csproj", "{79368F43-C5D6-4267-9EFC-17CF54394062}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSTF5FormCOMConsumer", "src\GSTF5FormCOMConsumer\GSTF5FormCOMConsumer.csproj", "{242D5B36-299F-42C9-AA2D-5B4AD0406231}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{79368F43-C5D6-4267-9EFC-17CF54394062}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79368F43-C5D6-4267-9EFC-17CF54394062}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79368F43-C5D6-4267-9EFC-17CF54394062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{242D5B36-299F-42C9-AA2D-5B4AD0406231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{242D5B36-299F-42C9-AA2D-5B4AD0406231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{242D5B36-299F-42C9-AA2D-5B4AD0406231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{242D5B36-299F-42C9-AA2D-5B4AD0406231}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

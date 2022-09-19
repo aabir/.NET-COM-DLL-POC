@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -16,7 +16,7 @@
       <Guid>6dcfe41d-7a38-47dd-841d-bb26aae8e87a</Guid>
     </COMReference>
   </ItemGroup>
-
+  
   <ItemGroup>
     <Reference Include="CalculatorCOM">
       <HintPath>Lib\CalculatorCOM.dll</HintPath>

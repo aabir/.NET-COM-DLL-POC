@@ -54,7 +54,6 @@ namespace CalculatorCOMConsumer
             {
                 throw new Exception(ex.ToString());
             }
-            
         }
     }
 }
